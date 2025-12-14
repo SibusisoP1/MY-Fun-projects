@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Demo Calculator</title>
+    <link rel="stylesheet" href="css_style/calculator.css" />
+  </head>
+  <body>
+    <p class="display-calculations css-display"></p>
+    <p>
+      <button class="css-grey-btn css-button" onclick=" calculate(1);">
+        1
+      </button>
+      <button class="css-grey-btn css-button" onclick="calculate(2);">2</button>
+      <button class="css-grey-btn css-button" onclick="calculate(3) ;">
+        3
+      </button>
+      <button
+        class="css-orange-btn css-button"
+        onclick="calculate(' + '); console.log(calculation)"
+      >
+        +
+      </button>
+    </p>
+    <p>
+      <button class="css-grey-btn css-button" onclick="calculate(4)">4</button>
+      <button class="css-grey-btn css-button" onclick="calculate(5);">5</button>
+      <button class="css-grey-btn css-button" onclick="calculate(6);">6</button>
+      <button class="css-orange-btn css-button" onclick="calculate(' - ');">
+        -
+      </button>
+    </p>
+    <p>
+      <button class="css-grey-btn css-button" onclick="calculate(7);">7</button>
+      <button class="css-grey-btn css-button" onclick="calculate(8);">8</button>
+      <button class="css-grey-btn css-button" onclick="calculate(9);">9</button>
+      <button class="css-orange-btn css-button" onclick="calculate(' * ');">
+        *
+      </button>
+    </p>
+    <p>
+      <button class="css-grey-btn css-button" onclick="calculate(0);">0</button>
+      <button class="css-grey-btn css-button" onclick="calculate('.');">
+        .
+      </button>
+      <button
+        class="css-grey-btn css-button"
+        onclick="results = eval(results);
+        displayCalculations();
+
+        localStorage.setItem('results',results);
+        "
+      >
+        =
+      </button>
+      <button class="css-orange-btn css-button" onclick="calculate(' / ');">
+        /
+      </button>
+    </p>
+    <p>
+      <button
+        class="css-grey-btn css-button clear-btn"
+        onclick="
+        results=' ';
+
+        displayCalculations();
+
+        localStorage.setItem('results',results)
+        "
+      >
+        clear
+      </button>
+    </p>
+    <script src="js-calculator/calculator.js"></script>
+  </body>
+</html>
